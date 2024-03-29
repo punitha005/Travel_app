@@ -1,0 +1,109 @@
+Destination API Endpoints Collection
+GET Destinations
+Description: Retrieve a list of all destinations.
+Method: GET
+URL: http://localhost:8000/destinations/
+Response:
+
+[
+    {
+        "id": 1,
+        "name": "Test Destination",
+        "country": "Test Country",
+        "description": "Test Description",
+        "best_time_to_visit": "Test Time",
+        "category": "Beach",
+        "image_url": "https://example.com/image.jpg",
+        "created_at": "2022-03-30T10:00:00Z",
+        "updated_at": "2022-03-30T10:00:00Z"
+    },
+    {
+        "id": 2,
+        "name": "Another Destination",
+        "country": "Another Country",
+        "description": "Another Description",
+        "best_time_to_visit": "Another Time",
+        "category": "Mountain",
+        "image_url": "https://example.com/another_image.jpg",
+        "created_at": "2022-03-30T11:00:00Z",
+        "updated_at": "2022-03-30T11:00:00Z"
+    }
+]
+GET Destination Detail
+Description: Retrieve details of a specific destination.
+Method: GET
+URL: http://localhost:8000/destinations/{destination_id}/
+Response:
+
+{
+    "id": 1,
+    "name": "Test Destination",
+    "country": "Test Country",
+    "description": "Test Description",
+    "best_time_to_visit": "Test Time",
+    "category": "Beach",
+    "image_url": "https://example.com/image.jpg",
+    "created_at": "2022-03-30T10:00:00Z",
+    "updated_at": "2022-03-30T10:00:00Z"
+}
+Create Destination
+Description: Create a new destination.
+Method: POST
+URL: http://localhost:8000/destinations/
+Request Body:
+
+{
+    "name": "New Destination",
+    "country": "New Country",
+    "description": "New Description",
+    "best_time_to_visit": "New Time",
+    "category": "City",
+    "image_url": "https://example.com/new_image.jpg"
+}
+Response:
+
+{
+    "id": 3,
+    "name": "New Destination",
+    "country": "New Country",
+    "description": "New Description",
+    "best_time_to_visit": "New Time",
+    "category": "City",
+    "image_url": "https://example.com/new_image.jpg",
+    "created_at": "2022-03-30T12:00:00Z",
+    "updated_at": "2022-03-30T12:00:00Z"
+}
+Update Destination
+Description: Update an existing destination.
+Method: PUT
+URL: http://localhost:8000/destinations/{destination_id}/
+Request Body:
+
+{
+    "name": "Updated Destination",
+    "country": "Updated Country",
+    "description": "Updated Description",
+    "best_time_to_visit": "Updated Time",
+    "category": "Mountain",
+    "image_url": "https://example.com/updated_image.jpg"
+}
+Response:
+
+{
+    "id": 3,
+    "name": "Updated Destination",
+    "country": "Updated Country",
+    "description": "Updated Description",
+    "best_time_to_visit": "Updated Time",
+    "category": "Mountain",
+    "image_url": "https://example.com/updated_image.jpg",
+    "created_at": "2022-03-30T12:00:00Z",
+    "updated_at": "2022-03-30T13:00:00Z"
+}
+Delete Destination
+Description: Delete an existing destination.
+Method: DELETE
+URL: http://localhost:8000/destinations/{destination_id}/
+Response:
+
+No Content (HTTP status code 204)
